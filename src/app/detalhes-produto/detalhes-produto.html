@@ -1,0 +1,14 @@
+<div *ngIf="produto; else naoEncontrado">
+  <h2>{{ produto.nome }}</h2>
+  <p><strong>Descrição:</strong> {{ produto.descricao }}</p>
+  <p><strong>Preço:</strong> R$ {{ produto.preco }}</p>
+  <p><strong>Estoque:</strong>
+    <span [ngStyle]="{ color: produto.emEstoque ? 'green' : 'red' }">
+      {{ produto.emEstoque ? 'Disponível' : 'Indisponível' }}
+    </span>
+  </p>
+</div>
+
+<ng-template #naoEncontrado>
+  <p>Produto não encontrado.</p>
+</ng-template>

@@ -1,0 +1,18 @@
+
+<div class="mb-3">
+  <button class="btn btn-warning" (click)="toggleBanner()">
+    {{ showBanner ? 'Ocultar Banner Promocional' : 'Mostrar Banner Promocional' }}
+  </button>
+</div>
+
+<div class="row">
+  <div class="col-md-12" *ngIf="showBanner">
+    <div class="card text-white bg-success mb-3">
+      <div class="card-body">
+        <h5 class="card-title">🎉 Promoção Especial</h5>
+        <p class="card-text">Aproveite 50% de desconto em todos os produtos da loja por tempo limitado!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
